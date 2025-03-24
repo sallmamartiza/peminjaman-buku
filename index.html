@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman Buku Perpustakaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Peminjaman Buku Perpustakaan</h1>
+
+    <form id="loanForm">
+        <label for="name">Nama Peminjam</label>
+        <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+
+        <label for="book">Judul Buku</label>
+        <select id="book">
+            <option value="Pemrograman Web">Pemrograman Web</option>
+            <option value="Algoritma dan Struktur Data">Algoritma dan Struktur Data</option>
+            <option value="Jaringan Komputer">Jaringan Komputer</option>
+            <option value="Manajemen Basis Data">Manajemen Basis Data</option>
+        </select>
+
+        <label for="duration">Durasi Peminjaman (Hari)</label>
+        <input type="number" id="duration" placeholder="Masukkan jumlah hari peminjaman" required>
+
+        <button type="submit">Pinjam Buku</button>
+    </form>
+
+    <div class="result" id="result">
+        <h2>Detail Peminjaman</h2>
+        <p>Nama Peminjam: <span id="resultName"></span></p>
+        <p>Judul Buku: <span id="resultBook"></span></p>
+        <p>Durasi Peminjaman: <span id="resultDuration"></span> Hari</p>
+        <p>Tanggal Pengembalian: <span id="returnDate"></span></p>
+        <button onclick="printPage()">Print Halaman</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
